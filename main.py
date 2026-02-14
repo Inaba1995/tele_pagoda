@@ -48,8 +48,8 @@ async def get_weather():
 
 
 
-@dp.message(F.text == "/weather")
-async def cmd_weather(message: types.Message):
+@dp.message(Command('weather'))
+async def weather(message: Message):
     weather_info = await get_weather()
     await message.answer(weather_info)
 
