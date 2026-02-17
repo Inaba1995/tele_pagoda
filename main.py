@@ -21,6 +21,7 @@ async def get_weather():
     try:
         response = requests.get(url, headers=headers, params=params)
         data = response.json()
+        print("Ответ API:", data)
 
         fact = data["fact"]
         temp = fact["temp"]
